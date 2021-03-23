@@ -5,7 +5,7 @@ import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
- * 6-18
+ * 4-18
  */
 public class ConnectionPoolTest {
     static ConnectionPool pool  = new ConnectionPool(10);
@@ -15,16 +15,22 @@ public class ConnectionPoolTest {
     static CountDownLatch end;
 
     public static void main(String[] args) throws Exception {
-        // 线程数量，可以线程数量进行观察
+        // 线程数量
         int threadCount = 50;
         end = new CountDownLatch(threadCount);
+        // 每个线程获取多少次连接
         int count = 20;
+        // 线程获取到连接的次数
         AtomicInteger got = new AtomicInteger();
+        // 线程没获取到连接的次数
         AtomicInteger notGot = new AtomicInteger();
+
+        // 创建线程并启动
         for (int i = 0; i < threadCount; i++) {
             Thread thread = new Thread(new ConnetionRunner(count, got, notGot), "ConnectionRunnerThread");
             thread.start();
         }
+
         start.countDown();
         end.await();
         System.out.println("total invoke: " + (threadCount * count));

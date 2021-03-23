@@ -3,7 +3,7 @@ package com.ifeve.chapter04;
 import java.util.concurrent.TimeUnit;
 
 /**
- * 6-9
+ * 4-9
  */
 public class Shutdown {
     public static void main(String[] args) throws Exception {

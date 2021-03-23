@@ -1,7 +1,9 @@
 package com.ifeve.chapter03;
 
 public class InstanceFactory {
-    private static class InstanceHolder {
+
+    public static class InstanceHolder {
+
         public static Instance instance = new Instance();
     }
 
@@ -10,5 +12,11 @@ public class InstanceFactory {
     }
 
     static class Instance {
+    }
+}
+
+class A{
+    public static void main(String[] args) {
+        System.out.println(InstanceFactory.InstanceHolder.instance);;
     }
 }

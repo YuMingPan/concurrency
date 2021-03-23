@@ -5,7 +5,7 @@ import java.io.PipedReader;
 import java.io.PipedWriter;
 
 /**
- * 6-12
+ * 4-12
  */
 public class Piped {
 
@@ -20,6 +20,7 @@ public class Piped {
         int receive = 0;
         try {
             while ((receive = System.in.read()) != -1) {
+                System.out.println("....这里执行了xxx次");
                 out.write(receive);
             }
         } finally {

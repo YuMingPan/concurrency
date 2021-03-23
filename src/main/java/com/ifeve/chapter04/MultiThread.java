@@ -4,9 +4,7 @@ import java.lang.management.ManagementFactory;
 import java.lang.management.ThreadInfo;
 import java.lang.management.ThreadMXBean;
 
-/**
- * 6-1
- */
+
 public class MultiThread {
 
     public static void main(String[] args) {

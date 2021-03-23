@@ -1,7 +1,7 @@
 package com.ifeve.chapter04;
 
 /**
- * 6-5
+ * 4-5
  */
 public class Daemon {
 
@@ -15,7 +15,7 @@ public class Daemon {
         @Override
         public void run() {
             try {
-                SleepUtils.second(100);
+                SleepUtils.second(2);
             } finally {
                 System.out.println("DaemonThread finally run.");
             }

@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 /**
- * 6-2
+ * 4-2
  */
 public class Priority {
     private static volatile boolean notStart = true;
@@ -24,7 +24,7 @@ public class Priority {
         notStart = false;
         Thread.currentThread().setPriority(8);
         System.out.println("done.");
-        TimeUnit.SECONDS.sleep(10);
+        TimeUnit.SECONDS.sleep(20);
         notEnd = false;
 
         for (Job job : jobs) {

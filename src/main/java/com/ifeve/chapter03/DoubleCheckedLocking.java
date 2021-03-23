@@ -1,5 +1,8 @@
 package com.ifeve.chapter03;
 
+/**
+ * 双重检查锁定
+ */
 public class DoubleCheckedLocking { //1
     private static Instance instance; //2
 
